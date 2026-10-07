@@ -7,5 +7,6 @@ namespace model;
     public function createTable(): void;
     public function insert(): void;
     public function findOne(array $criteria): array;
-    public function update(array $criteria, object $newData): void;
+    public function update(array $criteria): void;
+     public function delete(array $criteria): void;
 }

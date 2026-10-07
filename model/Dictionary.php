@@ -83,12 +83,8 @@ class Dictionary implements ModelInterface
      * @param object $newData new data for update
      * @return void
      */
-    public function update(array $criteria, object $newData): void
+    public function update(array $criteria): void
     {
-        if(!$newData instanceof Dictionary) {
-            throw new \InvalidArgumentException('Not a Dictionary');
-        }
-
         if (!isset($criteria['eng_word'])) {
             throw new \InvalidArgumentException(
                 "update requires 'eng_word' key, got: " . implode(', ', array_keys($criteria))
@@ -100,14 +96,14 @@ class Dictionary implements ModelInterface
             ':old_eng' => $criteria['eng_word']
         ];
 
-        if (!empty($newData->getEngWord())) {
+        if (!empty($this->getEngWord())) {
             $fields[] = "eng_word = :new_eng";
-            $params[':new_eng'] = $newData->getEngWord();
+            $params[':new_eng'] = $this->getEngWord();
         }
 
-        if (!empty($newData->getRuWord())) {
+        if (!empty($this->getRuWord())) {
             $fields[] = "ru_word = :new_ru";
-            $params[':new_ru'] = $newData->getRuWord();
+            $params[':new_ru'] = $this->getRuWord();
         }
 
         $stmt = $this->pdo->prepare(
@@ -119,6 +115,23 @@ class Dictionary implements ModelInterface
         $stmt->execute(
             $params
         );
+    }
+
+    public function delete(array $criteria): void
+    {
+        if (!isset($criteria['eng_word'])) {
+            throw new \InvalidArgumentException(
+                "delete requires 'eng_word' key, got: " . implode(', ', array_keys($criteria))
+            );
+        }
+
+        // Подготавливаем SQL-запрос на удаление
+        $stmt = $this->pdo->prepare("DELETE FROM Dictionary WHERE eng_word = ?");
+
+        // Выполняем запрос, передавая значение слова в массиве параметров
+        $stmt->execute([
+            $criteria['eng_word']
+        ]);
     }
 
     public function getEngWord(): string { return $this->eng_word; }
