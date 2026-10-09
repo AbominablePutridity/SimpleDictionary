@@ -2,86 +2,59 @@
 
 namespace controller;
 
-use model\Dictionary;
+require_once __DIR__ . '/../service/DictionaryService.php';
 
-require_once 'model/Dictionary.php';
 
 class DictionaryController
 {
-    private $pdo;
+    private string $domainAccess;
+    private object $pdo;
 
-    public function __construct($pdo)
+    public function __construct(string $domainAccess, object $pdo)
     {
+        $this->domainAccess = $domainAccess;
         $this->pdo = $pdo;
+
+        $this->startController();
     }
 
-    // POST
-    //[
-    //  {eng, ru},
-    //  {eng, ru},
-    //]
-    public function insertWord(array $body): void
+    public function startController(): void
     {
-        foreach ($body as $word) {
-            $dictionary = new Dictionary(
-                $word['word'],
-                $word['translation'],
-                $this->pdo
-            );
+        $request = new Request();
 
-            $dictionary->insert();
+        // all endpoints
+        $routes = [
+            'dictionary_word_inserting' => $this->domainAccess . '/api/dictionary/create',
+            'dictionary_word_updating' => $this->domainAccess . '/api/dictionary/update',
+            'dictionary_word_deleting' => $this->domainAccess . '/api/dictionary/delete',
+        ];
+
+        // connecting services
+        $dictionaryService = new DictionaryService($this->pdo);
+
+        // routing logic
+        if ($request->getMethod() === 'POST' &&
+            $request->getRequestUri() === $routes['dictionary_word_inserting']) {
+
+            $dictionaryService->insertWord(
+                $request->decodeBody()
+            );
         }
 
-        header("Content-Type: application/json; charset=UTF-8");
-        echo json_encode(["status" => "success", "message" => "all words successfly added to SQLite database!"]);
-        exit;
-    }
+        if ($request->getMethod() === 'PUT' &&
+            $request->getRequestUri() === $routes['dictionary_word_updating']) {
 
-    // PUT
-    //[
-    //  {id, eng, ru},
-    //  {id, eng, ru},
-    //]
-    public function updateWord(array $body): void
-    {
-        foreach ($body as $word) {
-            $criteria = $word['id'];
-
-            $dictionary = new Dictionary(
-                $word['word'],
-                $word['translation'],
-                $this->pdo
+            $dictionaryService->updateWord(
+                $request->decodeBody()
             );
-
-            $dictionary->update(['eng_word' => $criteria]);
         }
 
-        header("Content-Type: application/json; charset=UTF-8");
-        echo json_encode(["status" => "success", "message" => "all words successfly updated to SQLite database!"]);
-        exit;
-    }
+        if ($request->getMethod() === 'DELETE' &&
+            $request->getRequestUri() === $routes['dictionary_word_deleting']) {
 
-    // DELETE
-    //[
-    //  {id},
-    //  {id}
-    //]
-    public function deleteWord(array $body): void
-    {
-        foreach ($body as $word) {
-            $criteria = $word['id'];
-
-            $dictionary = new Dictionary(
-                "",
-                "",
-                $this->pdo
+            $dictionaryService->deleteWord(
+                $request->decodeBody()
             );
-
-            $dictionary->delete(['eng_word' => $criteria]);
         }
-
-        header("Content-Type: application/json; charset=UTF-8");
-        echo json_encode(["status" => "success", "message" => "all words successfly deleted to SQLite database!"]);
-        exit;
     }
 }
