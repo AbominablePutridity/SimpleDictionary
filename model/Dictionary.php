@@ -8,6 +8,7 @@ require_once 'model/ModelInterface.php';
 
 class Dictionary implements ModelInterface
 {
+    const LIMIT_PAGINATION = 50;
     private string $eng_word;
     private string $ru_word;
 
@@ -38,6 +39,58 @@ class Dictionary implements ModelInterface
             )
         ");
 
+    }
+
+    /**
+     * find all recordings in a dictionary and find data at criteria and pagination
+     * @param array $criteria
+     * @param int $page
+     * @return array
+     */
+    function findBy(array $criteria, int $page): array
+    {
+        $offset = ($page - 1) * self::LIMIT_PAGINATION;
+
+        $query = "SELECT * FROM Dictionary";
+
+        $stmt = null;
+
+        $sort_tail = "";
+
+        if(!empty($criteria["sort"]))
+        {
+            switch ($criteria["sort"])
+            {
+                case 'asc':
+                    $sort_tail = " ORDER BY eng_word ASC";
+                    break;
+                case 'desc':
+                    $sort_tail = " ORDER BY eng_word DESC";
+                    break;
+            }
+        }
+
+        if(!empty($criteria["search"])){
+            $stmt = $this->pdo->prepare($query . " WHERE (eng_word LIKE ?) OR (ru_word LIKE ?)" . $sort_tail . " LIMIT ? OFFSET ?");
+            //$stmt->execute(["%" . $criteria["search"] . "%", $this::LIMIT_PAGINATION, $offset]);
+
+            // Bind the values obviously because in default behaviour PDO has translation in strings and not numeric types
+            $stmt->bindValue(1, "%" . $criteria["search"] . "%", $this->pdo::PARAM_STR);
+            $stmt->bindValue(2, "%" . $criteria["search"] . "%", $this->pdo::PARAM_STR);
+            $stmt->bindValue(3, self::LIMIT_PAGINATION, $this->pdo::PARAM_INT);
+            $stmt->bindValue(4, $offset, $this->pdo::PARAM_INT);
+        } else {
+            $stmt = $this->pdo->prepare($query . $sort_tail . " LIMIT ? OFFSET ?");
+            //$stmt->execute([$this::LIMIT_PAGINATION, $offset]);
+
+            // Bind the values obviously because in default behaviour PDO has translation in strings and not numeric types
+            $stmt->bindValue(1, self::LIMIT_PAGINATION, $this->pdo::PARAM_INT);
+            $stmt->bindValue(2, $offset, $this->pdo::PARAM_INT);
+        }
+
+        $stmt->execute();
+
+        return $stmt->fetchAll($this->pdo::FETCH_ASSOC);
     }
 
     /**

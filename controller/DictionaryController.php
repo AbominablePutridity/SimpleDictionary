@@ -24,6 +24,7 @@ class DictionaryController
 
         // all endpoints
         $routes = [
+            'dictionary_get' => $this->domainAccess . '/api/dictionary/get',
             'dictionary_word_inserting' => $this->domainAccess . '/api/dictionary/create',
             'dictionary_word_updating' => $this->domainAccess . '/api/dictionary/update',
             'dictionary_word_deleting' => $this->domainAccess . '/api/dictionary/delete',
@@ -33,6 +34,14 @@ class DictionaryController
         $dictionaryService = new DictionaryService($this->pdo);
 
         // routing logic
+        if ($request->getMethod() === 'GET' &&
+            $request->getRequestUri() === $routes['dictionary_get']) {
+
+            $dictionaryService->getDictionary(
+                $request->getQueryParams()
+            );
+        }
+
         if ($request->getMethod() === 'POST' &&
             $request->getRequestUri() === $routes['dictionary_word_inserting']) {
 

@@ -15,6 +15,28 @@ class DictionaryService
         $this->pdo = $pdo;
     }
 
+    // GET {search, page, sort}
+    public function getDictionary(array $params)
+    {
+        $dictionary = new Dictionary(
+            "",
+            "",
+            $this->pdo
+        );
+
+        header("Content-Type: application/json; charset=UTF-8");
+        echo json_encode(
+            $dictionary->findBy(
+                [
+                    "search" => $params["search"],
+                    "sort" => $params["sort"]
+                ],
+                $params["page"]
+            )
+        );
+        exit;
+    }
+
     // POST
     //[
     //  {eng, ru},
