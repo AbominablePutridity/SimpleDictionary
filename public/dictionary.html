@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Словарь</title>
+    <style>
+        body { font-family: sans-serif; margin: 2rem; }
+        form, .row { display: flex; gap: .5rem; margin-bottom: 1rem; align-items: center; }
+        input, select, button { padding: .4rem .6rem; font-size: 1rem; }
+        table { border-collapse: collapse; }
+        th, td { border: 1px solid #ccc; padding: .4rem .8rem; }
+        th { background: #f5f5f5; }
+        .actions { display: flex; gap: .3rem; }
+        .edit { background: #ffeeba; }
+        .del  { background: #f8d7da; }
+        #msg { color: #b00; margin: .5rem 0; min-height: 1.2em; }
+    </style>
+</head>
+<body>
+
+<h1>Словарь</h1>
+
+<!-- Поиск и сортировка -->
+<form id="searchForm">
+    <input name="search" placeholder="Поиск...">
+    <select name="sort">
+        <option value="">Без сортировки</option>
+        <option value="asc">A → Z</option>
+        <option value="desc">Z → A</option>
+    </select>
+    <button type="submit">Найти</button>
+</form>
+
+<!-- Форма добавления / редактирования -->
+<form id="editorForm">
+    <input name="eng_word" placeholder="English" required>
+    <input name="ru_word"  placeholder="Русский" required>
+    <input type="hidden" name="original_eng">
+    <button type="submit" id="saveBtn">Добавить</button>
+    <button type="button" id="resetBtn">Сбросить</button>
+</form>
+
+<div id="msg"></div>
+
+<table>
+    <thead>
+    <tr>
+        <th>English</th>
+        <th>Русский</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+</table>
+
+<div id="pager"></div>
+
+<script>
+    // ==================== настройки ====================
+    const API = '/MyProj/index.php/api/dictionary';
+
+    // ==================== элементы ====================
+    const searchForm = document.getElementById('searchForm');
+    const editorForm = document.getElementById('editorForm');
+    const tbody      = document.getElementById('tbody');
+    const pager      = document.getElementById('pager');
+    const msg        = document.getElementById('msg');
+    const saveBtn    = document.getElementById('saveBtn');
+
+    let currentPage = 1;
+
+    // ==================== утилиты ====================
+    function esc(s) {
+        return String(s).replace(/[&<>"']/g, c => ({
+            '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+        }[c]));
+    }
+
+    function showError(text) {
+        msg.textContent = text;
+    }
+
+    function clearError() {
+        msg.textContent = '';
+    }
+
+    // ==================== загрузка списка ====================
+    async function load(page = 1) {
+        clearError();
+        currentPage = page;
+
+        // Service is expecting whole three keys: search, sort, page
+        const formData = new FormData(searchForm);
+        const params = new URLSearchParams();
+        params.set('search', formData.get('search') || '');
+        params.set('sort',   formData.get('sort')   || '');
+        params.set('page',   page);
+
+        const res  = await fetch(API + '/get?' + params.toString());
+        const text = await res.text();
+
+        let rows;
+        try {
+            rows = JSON.parse(text);
+        } catch (e) {
+            tbody.innerHTML = '<tr><td colspan="3">Сервер вернул не JSON</td></tr>';
+            showError('Ответ сервера: ' + text.slice(0, 200));
+            return;
+        }
+
+        if (!Array.isArray(rows)) {
+            tbody.innerHTML = '<tr><td colspan="3">Неожиданный формат данных</td></tr>';
+            return;
+        }
+
+        if (rows.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="3">Ничего не найдено</td></tr>';
+        } else {
+            tbody.innerHTML = rows.map(r => `
+            <tr>
+                <td>${esc(r.eng_word)}</td>
+                <td>${esc(r.ru_word)}</td>
+                <td class="actions">
+                    <button class="edit"
+                            data-eng="${esc(r.eng_word)}"
+                            data-ru="${esc(r.ru_word)}">✎</button>
+                    <button class="del"
+                            data-eng="${esc(r.eng_word)}">🗑</button>
+                </td>
+            </tr>
+        `).join('');
+        }
+
+        // Pagination
+        pager.innerHTML = `
+        <button ${page === 1 ? 'disabled' : ''} id="prevBtn">←</button>
+        Стр. ${page}
+        <button ${rows.length === 0 ? 'disabled' : ''} id="nextBtn">→</button>
+    `;
+
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        if (prevBtn) prevBtn.onclick = () => load(page - 1);
+        if (nextBtn) nextBtn.onclick = () => load(page + 1);
+    }
+
+    // ==================== SEARCH ====================
+    searchForm.addEventListener('submit', e => {
+        e.preventDefault();
+        load(1);
+    });
+
+    // ==================== CLICKS BY TABLE ====================
+    tbody.addEventListener('click', e => {
+        const btn = e.target.closest('button');
+        if (!btn) return;
+
+        if (btn.classList.contains('edit')) {
+            startEdit(btn.dataset.eng, btn.dataset.ru);
+        } else if (btn.classList.contains('del')) {
+            deleteWord(btn.dataset.eng);
+        }
+    });
+
+    // ==================== redact mode ====================
+    function startEdit(eng, ru) {
+        editorForm.elements['eng_word'].value = eng;
+        editorForm.elements['ru_word'].value = ru;
+        editorForm.elements['original_eng'].value = eng;
+        saveBtn.textContent = 'Сохранить';
+        clearError();
+    }
+
+    function resetEditor() {
+        editorForm.reset();
+        editorForm.elements['original_eng'].value = '';
+        saveBtn.textContent = 'Добавить';
+        clearError();
+    }
+
+    document.getElementById('resetBtn').addEventListener('click', resetEditor);
+
+    // ==================== SAVE (Create or Update) ====================
+    editorForm.addEventListener('submit', async e => {
+        e.preventDefault();
+
+        const eng      = editorForm.elements['eng_word'].value.trim();
+        const ru       = editorForm.elements['ru_word'].value.trim();
+        const original = editorForm.elements['original_eng'].value;
+
+        if (!eng || !ru) {
+            showError('Заполните оба поля');
+            return;
+        }
+
+        const isEdit = original !== '';
+        const url    = API + (isEdit ? '/update' : '/create');
+        const method = isEdit ? 'PUT' : 'POST';
+
+        // ---- The format, which expects DictionaryService ----
+        // POST /create: [ { word, translation } ]
+        // PUT  /update: [ { id, word, translation } ]   id = СТАРОЕ eng_word
+        const body = isEdit
+            ? [ { id: original, word: eng, translation: ru } ]
+            : [ { word: eng, translation: ru } ];
+
+        const res = await fetch(url, {
+            method,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+        });
+
+        if (!res.ok) {
+            const text = await res.text();
+            showError('Ошибка: ' + text);
+            return;
+        }
+
+        resetEditor();
+        load(currentPage);
+    });
+
+    // ==================== DELETE ====================
+    async function deleteWord(eng) {
+        if (!confirm(`Удалить "${eng}"?`)) return;
+
+        // DELETE /delete: [ { id } ]   id = eng_word
+        const body = [ { id: eng } ];
+
+        const res = await fetch(API + '/delete', {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+        });
+
+        if (!res.ok) {
+            showError('Ошибка удаления: ' + (await res.text()));
+            return;
+        }
+
+        load(currentPage);
+    }
+
+    // ==================== старт ====================
+    load(1);
+</script>
+
+</body>
+</html>
