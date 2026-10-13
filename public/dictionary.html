@@ -20,7 +20,7 @@
 
 <h1>Словарь</h1>
 
-<!-- Поиск и сортировка -->
+<!-- Search and sorting-->
 <form id="searchForm">
     <input name="search" placeholder="Поиск...">
     <select name="sort">
@@ -31,7 +31,7 @@
     <button type="submit">Найти</button>
 </form>
 
-<!-- Форма добавления / редактирования -->
+<!--Adding form / redact -->
 <form id="editorForm">
     <input name="eng_word" placeholder="English" required>
     <input name="ru_word"  placeholder="Русский" required>
@@ -56,10 +56,10 @@
 <div id="pager"></div>
 
 <script>
-    // ==================== настройки ====================
+    // ==================== API settings ====================
     const API = '/MyProj/index.php/api/dictionary';
 
-    // ==================== элементы ====================
+    // ==================== main elements ====================
     const searchForm = document.getElementById('searchForm');
     const editorForm = document.getElementById('editorForm');
     const tbody      = document.getElementById('tbody');
@@ -69,7 +69,7 @@
 
     let currentPage = 1;
 
-    // ==================== утилиты ====================
+    // ==================== utils ====================
     function esc(s) {
         return String(s).replace(/[&<>"']/g, c => ({
             '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
@@ -84,7 +84,7 @@
         msg.textContent = '';
     }
 
-    // ==================== загрузка списка ====================
+    // ==================== List loader ====================
     async function load(page = 1) {
         clearError();
         currentPage = page;

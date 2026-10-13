@@ -34,7 +34,7 @@ class Dictionary implements ModelInterface
         $this->pdo->exec("
             CREATE TABLE IF NOT EXISTS Dictionary (" .
                 //id INTEGER PRIMARY KEY AUTOINCREMENT,
-                "eng_word TEXT NOT NULL UNIQUE,
+                "eng_word TEXT PRIMARY KEY NOT NULL UNIQUE,
                 ru_word TEXT NOT NULL
             )
         ");
@@ -178,10 +178,10 @@ class Dictionary implements ModelInterface
             );
         }
 
-        // Подготавливаем SQL-запрос на удаление
+        // Prepairing SQL-query to delete
         $stmt = $this->pdo->prepare("DELETE FROM Dictionary WHERE eng_word = ?");
 
-        // Выполняем запрос, передавая значение слова в массиве параметров
+        // Execute the query
         $stmt->execute([
             $criteria['eng_word']
         ]);
