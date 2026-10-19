@@ -30,7 +30,7 @@ class VerbForms implements ModelInterface
     {
         $offset = ($page - 1) * self::LIMIT_PAGINATION;
 
-        $query = "SELECT * FROM VerbForms vf";
+        $query = "SELECT vf.*, d.ru_word FROM VerbForms vf LEFT JOIN Dictionary d ON vf.dictionary_id = d.eng_word";
 
         $stmt = null;
 
@@ -50,7 +50,7 @@ class VerbForms implements ModelInterface
         }
 
         if(!empty($criteria["search"])){
-            $stmt = $this->pdo->prepare($query . " LEFT JOIN Dictionary d ON vf.dictionary_id = d.eng_word WHERE (vf.dictionary_id LIKE ?) OR (vf.verb_2 LIKE ?) OR (vf.verb_3 LIKE ?) OR (d.ru_word LIKE ?)" . $sort_tail . " LIMIT ? OFFSET ?");
+            $stmt = $this->pdo->prepare($query . " WHERE (vf.dictionary_id LIKE ?) OR (vf.verb_2 LIKE ?) OR (vf.verb_3 LIKE ?) OR (d.ru_word LIKE ?)" . $sort_tail . " LIMIT ? OFFSET ?");
             //$stmt->execute(["%" . $criteria["search"] . "%", $this::LIMIT_PAGINATION, $offset]);
 
             // Bind the values obviously because in default behaviour PDO has translation in strings and not numeric types

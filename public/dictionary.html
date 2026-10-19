@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <title>Словарь</title>
     <style>
-        body { font-family: sans-serif; margin: 2rem; }
+        body {
+            font-family: sans-serif;
+            margin: 0 auto;         /* center by horizontal */
+            padding: 2rem;          /* Paddings with all sides */
+            max-width: 900px;       /* limit with by 900 px */
+            box-sizing: border-box;
+        }
         form, .row { display: flex; gap: .5rem; margin-bottom: 1rem; align-items: center; }
         input, select, button { padding: .4rem .6rem; font-size: 1rem; }
         table { border-collapse: collapse; }

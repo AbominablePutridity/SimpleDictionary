@@ -107,7 +107,7 @@ class VerbFormsService
                 $this->pdo
             );
 
-            $verbForms->delete(['eng_word' => $criteria]);
+            $verbForms->delete(['dictionary_id' => $criteria]);
         }
 
         header("Content-Type: application/json; charset=UTF-8");

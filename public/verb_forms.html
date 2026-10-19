@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>VerbForms CRUD</title>
+    <style>
+        body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem}
+        table{width:100%;border-collapse:collapse;margin:1rem 0}
+        th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left;font-size:14px}
+        th{background:#f4f4f4}
+        input,select,button{padding:.35rem .5rem;font-size:14px}
+        .row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:.5rem 0}
+        .err{color:#b00}
+        .ok{color:#080}
+        form.inline{display:flex;gap:.4rem;flex-wrap:wrap}
+    </style>
+</head>
+<body>
+
+<h2>VerbForms CRUD</h2>
+
+<!-- ===== READ / фильтры ===== -->
+<div class="row">
+    <input id="q" placeholder="search...">
+    <select id="sort">
+        <option value="">—</option>
+        <option value="asc">asc</option>
+        <option value="desc">desc</option>
+    </select>
+    <button id="load">Загрузить</button>
+    <button id="prev">←</button>
+    <span id="pageLbl">1</span>
+    <button id="next">→</button>
+</div>
+
+<div id="msg"></div>
+
+<table>
+    <thead>
+    <tr><th>infinitive</th><th>verb_2</th><th>verb_3</th><th>translate</th><th></th></tr>
+    </thead>
+    <tbody id="rows"></tbody>
+</table>
+
+<!-- ===== CREATE ===== -->
+<h3>Добавить</h3>
+<form id="createForm" class="inline">
+    <input name="word" placeholder="infinitive" required>
+    <input name="verb_2" placeholder="verb_2" required>
+    <input name="verb_3" placeholder="verb_3" required>
+    <input name="translation" placeholder="перевод" required>
+    <button>Создать</button>
+</form>
+
+<script>
+    const API = '/MyProj/index.php/api/verb_forms';   // <-- this is API route (this project is located in "MyProj" folder - rename if is not)
+    let page = 1;
+
+    const $ = s => document.querySelector(s);
+    const msg = (t, ok=false) => { const e=$('#msg'); e.className = ok?'ok':'err'; e.textContent = t; };
+
+    async function req(method, path, body) {
+        const r = await fetch(API + path, {
+            method,
+            headers: body ? {'Content-Type':'application/json'} : undefined,
+            body: body ? JSON.stringify(body) : undefined
+        });
+        const txt = await r.text();
+        let data; try { data = JSON.parse(txt); } catch { data = txt; }
+        if (!r.ok) throw new Error(typeof data === 'string' ? data : JSON.stringify(data));
+        return data;
+    }
+
+    async function load() {
+        try {
+            const q = encodeURIComponent($('#q').value);
+            const s = $('#sort').value;
+            const data = await req('GET', `/get?search=${q}&sort=${s}&page=${page}`);
+            const rows = $('#rows');
+            rows.innerHTML = '';
+            if (!data.length) {
+                rows.innerHTML = '<tr><td colspan="5">пусто</td></tr>';
+                return;
+            }
+            for (const r of data) {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+        <td>${esc(r.dictionary_id)}</td>
+        <td>${esc(r.verb_2)}</td>
+        <td>${esc(r.verb_3)}</td>
+        <td>${esc(r.ru_word)}</td>
+        <td>
+          <button data-act="edit">edit</button>
+          <button data-act="del">del</button>
+        </td>`;
+                tr.querySelector('[data-act="edit"]').onclick = () => onEdit(r);
+                tr.querySelector('[data-act="del"]').onclick = () => onDelete(r);
+                rows.appendChild(tr);
+            }
+            $('#pageLbl').textContent = page;
+        } catch (e) { msg(e.message); }
+    }
+
+    function esc(s){ return String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+    async function onEdit(r) {
+        const word = prompt('infinitive (dictionary_id)', r.dictionary_id);
+        if (word === null) return;
+        const v2 = prompt('verb_2', r.verb_2); if (v2 === null) return;
+        const v3 = prompt('verb_3', r.verb_3); if (v3 === null) return;
+        const tr = prompt('перевод (translation)'); if (tr === null) return;
+        try {
+            await req('PUT', '/update', [{ id: r.dictionary_id, word, verb_2: v2, verb_3: v3, translation: tr }]);
+            msg('обновлено', true);
+            load();
+        } catch (e) { msg(e.message); }
+    }
+
+    async function onDelete(r) {
+        if (!confirm(`Удалить «${r.dictionary_id}»?`)) return;
+        try {
+            await req('DELETE', '/delete', [{ id: r.dictionary_id }]);
+            msg('удалено', true);
+            load();
+        } catch (e) { msg(e.message); }
+    }
+
+    $('#createForm').onsubmit = async e => {
+        e.preventDefault();
+        const f = e.target;
+        const body = [{
+            word: f.word.value.trim(),
+            verb_2: f.verb_2.value.trim(),
+            verb_3: f.verb_3.value.trim(),
+            translation: f.translation.value.trim()
+        }];
+        try {
+            await req('POST', '/create', body);
+            f.reset();
+            msg('создано', true);
+            load();
+        } catch (e) { msg(e.message); }
+    };
+
+    $('#load').onclick = () => { page = 1; load(); };
+    $('#prev').onclick = () => { if (page > 1) { page--; load(); } };
+    $('#next').onclick = () => { page++; load(); };
+
+    load();
+</script>
+</body>
+</html>
