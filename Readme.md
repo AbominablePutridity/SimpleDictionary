@@ -10,13 +10,13 @@ const DOMAIN_ACCESS = '/MyProj/index.php'; // - /MyProj - this is folder of my p
 
 2) /public/dictionary.html:
   ```js
-// ==================== API settings ====================
+    // ==================== API settings ====================
     const API = '/MyProj/index.php/api/dictionary'; // the same - remove /MyProj/ for your purpose
-    ```
+  ```
 
 3) /public/verb_forms.html:
-  ```json
-const API = '/MyProj/index.php/api/verb_forms'; // the same - remove /MyProj/ for your purpose
+  ```js
+    const API = '/MyProj/index.php/api/verb_forms'; // the same - remove /MyProj/ for your purpose
   ```
   ______________________
 
