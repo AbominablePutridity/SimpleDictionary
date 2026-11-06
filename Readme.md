@@ -1,5 +1,25 @@
 # the native PHP XAMPP project
 
+## !!! IMPORTANT !!!
+### If you want to deploy this project to your server, you need to edit some API path's in:
+1) index.php:
+  ```php
+// main domain for routing
+const DOMAIN_ACCESS = '/MyProj/index.php'; // - /MyProj - this is folder of my project - remove for your path
+  ```
+
+2) /public/dictionary.html:
+  ```js
+// ==================== API settings ====================
+    const API = '/MyProj/index.php/api/dictionary'; // the same - remove /MyProj/ for your purpose
+    ```
+
+3) /public/verb_forms.html:
+  ```json
+const API = '/MyProj/index.php/api/verb_forms'; // the same - remove /MyProj/ for your purpose
+  ```
+  ______________________
+
 using php 8.2, pdo - SQLite.
 
 the project attracts Dictionary (im writing for learn English language).
