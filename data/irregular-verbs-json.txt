@@ -1,0 +1,1508 @@
+[
+  {
+    "word": "be",
+    "verb_2": "was / were",
+    "verb_3": "been",
+    "translation": "быть, существовать, находиться"
+  },
+  {
+    "word": "have",
+    "verb_2": "had",
+    "verb_3": "had",
+    "translation": "иметь, обладать, получать"
+  },
+  {
+    "word": "do",
+    "verb_2": "did",
+    "verb_3": "done",
+    "translation": "делать, выполнять, совершать"
+  },
+  {
+    "word": "say",
+    "verb_2": "said",
+    "verb_3": "said",
+    "translation": "говорить, сказать, произносить"
+  },
+  {
+    "word": "go",
+    "verb_2": "went",
+    "verb_3": "gone",
+    "translation": "идти, ехать, отправляться"
+  },
+  {
+    "word": "get",
+    "verb_2": "got",
+    "verb_3": "got / gotten",
+    "translation": "получать, добираться, становиться"
+  },
+  {
+    "word": "make",
+    "verb_2": "made",
+    "verb_3": "made",
+    "translation": "делать, создавать, заставлять"
+  },
+  {
+    "word": "know",
+    "verb_2": "knew",
+    "verb_3": "known",
+    "translation": "знать, уметь, узнавать"
+  },
+  {
+    "word": "think",
+    "verb_2": "thought",
+    "verb_3": "thought",
+    "translation": "думать, считать, полагать"
+  },
+  {
+    "word": "take",
+    "verb_2": "took",
+    "verb_3": "taken",
+    "translation": "брать, взять, занимать (время)"
+  },
+  {
+    "word": "see",
+    "verb_2": "saw",
+    "verb_3": "seen",
+    "translation": "видеть, понимать, встречаться"
+  },
+  {
+    "word": "come",
+    "verb_2": "came",
+    "verb_3": "come",
+    "translation": "приходить, приезжать, происходить"
+  },
+  {
+    "word": "give",
+    "verb_2": "gave",
+    "verb_3": "given",
+    "translation": "давать, дарить, предоставлять"
+  },
+  {
+    "word": "find",
+    "verb_2": "found",
+    "verb_3": "found",
+    "translation": "находить, обнаруживать, считать"
+  },
+  {
+    "word": "tell",
+    "verb_2": "told",
+    "verb_3": "told",
+    "translation": "говорить, рассказывать, сообщать"
+  },
+  {
+    "word": "become",
+    "verb_2": "became",
+    "verb_3": "become",
+    "translation": "становиться, делаться, подходить"
+  },
+  {
+    "word": "leave",
+    "verb_2": "left",
+    "verb_3": "left",
+    "translation": "уходить, оставлять, покидать"
+  },
+  {
+    "word": "feel",
+    "verb_2": "felt",
+    "verb_3": "felt",
+    "translation": "чувствовать, ощущать, считать"
+  },
+  {
+    "word": "put",
+    "verb_2": "put",
+    "verb_3": "put",
+    "translation": "класть, ставить, помещать"
+  },
+  {
+    "word": "bring",
+    "verb_2": "brought",
+    "verb_3": "brought",
+    "translation": "приносить, приводить, привозить"
+  },
+  {
+    "word": "begin",
+    "verb_2": "began",
+    "verb_3": "begun",
+    "translation": "начинать, начинаться"
+  },
+  {
+    "word": "keep",
+    "verb_2": "kept",
+    "verb_3": "kept",
+    "translation": "держать, хранить, продолжать"
+  },
+  {
+    "word": "hold",
+    "verb_2": "held",
+    "verb_3": "held",
+    "translation": "держать, удерживать, проводить (мероприятие)"
+  },
+  {
+    "word": "write",
+    "verb_2": "wrote",
+    "verb_3": "written",
+    "translation": "писать, записывать, сочинять"
+  },
+  {
+    "word": "stand",
+    "verb_2": "stood",
+    "verb_3": "stood",
+    "translation": "стоять, выдерживать, терпеть"
+  },
+  {
+    "word": "hear",
+    "verb_2": "heard",
+    "verb_3": "heard",
+    "translation": "слышать, слушать, узнавать"
+  },
+  {
+    "word": "let",
+    "verb_2": "let",
+    "verb_3": "let",
+    "translation": "позволять, разрешать, сдавать в аренду"
+  },
+  {
+    "word": "mean",
+    "verb_2": "meant",
+    "verb_3": "meant",
+    "translation": "значить, означать, иметь в виду"
+  },
+  {
+    "word": "set",
+    "verb_2": "set",
+    "verb_3": "set",
+    "translation": "устанавливать, ставить, задавать"
+  },
+  {
+    "word": "meet",
+    "verb_2": "met",
+    "verb_3": "met",
+    "translation": "встречать, знакомиться, соответствовать"
+  },
+  {
+    "word": "run",
+    "verb_2": "ran",
+    "verb_3": "run",
+    "translation": "бежать, управлять, работать (о программе)"
+  },
+  {
+    "word": "pay",
+    "verb_2": "paid",
+    "verb_3": "paid",
+    "translation": "платить, оплачивать, расплачиваться"
+  },
+  {
+    "word": "sit",
+    "verb_2": "sat",
+    "verb_3": "sat",
+    "translation": "сидеть, заседать, садиться"
+  },
+  {
+    "word": "speak",
+    "verb_2": "spoke",
+    "verb_3": "spoken",
+    "translation": "говорить, разговаривать, выступать"
+  },
+  {
+    "word": "teach",
+    "verb_2": "taught",
+    "verb_3": "taught",
+    "translation": "преподавать, учить, обучать"
+  },
+  {
+    "word": "lead",
+    "verb_2": "led",
+    "verb_3": "led",
+    "translation": "вести, руководить, приводить"
+  },
+  {
+    "word": "read",
+    "verb_2": "read",
+    "verb_3": "read",
+    "translation": "читать, прочитывать, толковать"
+  },
+  {
+    "word": "grow",
+    "verb_2": "grew",
+    "verb_3": "grown",
+    "translation": "расти, выращивать, становиться"
+  },
+  {
+    "word": "lose",
+    "verb_2": "lost",
+    "verb_3": "lost",
+    "translation": "терять, проигрывать, лишаться"
+  },
+  {
+    "word": "fall",
+    "verb_2": "fell",
+    "verb_3": "fallen",
+    "translation": "падать, снижаться, наступать"
+  },
+  {
+    "word": "send",
+    "verb_2": "sent",
+    "verb_3": "sent",
+    "translation": "отправлять, посылать, передавать"
+  },
+  {
+    "word": "build",
+    "verb_2": "built",
+    "verb_3": "built",
+    "translation": "строить, создавать, сооружать"
+  },
+  {
+    "word": "understand",
+    "verb_2": "understood",
+    "verb_3": "understood",
+    "translation": "понимать, осознавать, постигать"
+  },
+  {
+    "word": "draw",
+    "verb_2": "drew",
+    "verb_3": "drawn",
+    "translation": "рисовать, чертить, привлекать"
+  },
+  {
+    "word": "break",
+    "verb_2": "broke",
+    "verb_3": "broken",
+    "translation": "ломать, разбивать, нарушать"
+  },
+  {
+    "word": "spend",
+    "verb_2": "spent",
+    "verb_3": "spent",
+    "translation": "тратить, проводить (время), расходовать"
+  },
+  {
+    "word": "cut",
+    "verb_2": "cut",
+    "verb_3": "cut",
+    "translation": "резать, сокращать, отрезать"
+  },
+  {
+    "word": "rise",
+    "verb_2": "rose",
+    "verb_3": "risen",
+    "translation": "подниматься, возрастать, вставать"
+  },
+  {
+    "word": "drive",
+    "verb_2": "drove",
+    "verb_3": "driven",
+    "translation": "водить, управлять, побуждать"
+  },
+  {
+    "word": "buy",
+    "verb_2": "bought",
+    "verb_3": "bought",
+    "translation": "покупать, приобретать"
+  },
+  {
+    "word": "wear",
+    "verb_2": "wore",
+    "verb_3": "worn",
+    "translation": "носить, изнашивать, надевать"
+  },
+  {
+    "word": "choose",
+    "verb_2": "chose",
+    "verb_3": "chosen",
+    "translation": "выбирать, избирать, предпочитать"
+  },
+  {
+    "word": "seek",
+    "verb_2": "sought",
+    "verb_3": "sought",
+    "translation": "искать, стремиться, добиваться"
+  },
+  {
+    "word": "throw",
+    "verb_2": "threw",
+    "verb_3": "thrown",
+    "translation": "бросать, кидать, выбрасывать"
+  },
+  {
+    "word": "catch",
+    "verb_2": "caught",
+    "verb_3": "caught",
+    "translation": "ловить, поймать, успевать"
+  },
+  {
+    "word": "deal",
+    "verb_2": "dealt",
+    "verb_3": "dealt",
+    "translation": "иметь дело, справляться, торговать"
+  },
+  {
+    "word": "win",
+    "verb_2": "won",
+    "verb_3": "won",
+    "translation": "побеждать, выигрывать, завоёвывать"
+  },
+  {
+    "word": "forget",
+    "verb_2": "forgot",
+    "verb_3": "forgotten",
+    "translation": "забывать, запамятовать"
+  },
+  {
+    "word": "lay",
+    "verb_2": "laid",
+    "verb_3": "laid",
+    "translation": "класть, укладывать, возлагать"
+  },
+  {
+    "word": "sell",
+    "verb_2": "sold",
+    "verb_3": "sold",
+    "translation": "продавать, торговать, предавать"
+  },
+  {
+    "word": "fight",
+    "verb_2": "fought",
+    "verb_3": "fought",
+    "translation": "бороться, сражаться, драться"
+  },
+  {
+    "word": "show",
+    "verb_2": "showed",
+    "verb_3": "shown / showed",
+    "translation": "показывать, демонстрировать, проявлять"
+  },
+  {
+    "word": "bear",
+    "verb_2": "bore",
+    "verb_3": "borne / born",
+    "translation": "нести, терпеть, рождать"
+  },
+  {
+    "word": "beat",
+    "verb_2": "beat",
+    "verb_3": "beaten",
+    "translation": "бить, побеждать, превосходить"
+  },
+  {
+    "word": "hide",
+    "verb_2": "hid",
+    "verb_3": "hidden",
+    "translation": "прятать, скрывать, прятаться"
+  },
+  {
+    "word": "hit",
+    "verb_2": "hit",
+    "verb_3": "hit",
+    "translation": "ударять, попадать, задевать"
+  },
+  {
+    "word": "hurt",
+    "verb_2": "hurt",
+    "verb_3": "hurt",
+    "translation": "ранить, болеть, вредить"
+  },
+  {
+    "word": "shut",
+    "verb_2": "shut",
+    "verb_3": "shut",
+    "translation": "закрывать, запирать, выключать"
+  },
+  {
+    "word": "spread",
+    "verb_2": "spread",
+    "verb_3": "spread",
+    "translation": "распространять, размазывать, расстилать"
+  },
+  {
+    "word": "strike",
+    "verb_2": "struck",
+    "verb_3": "struck / stricken",
+    "translation": "ударять, бастовать, поражать"
+  },
+  {
+    "word": "stick",
+    "verb_2": "stuck",
+    "verb_3": "stuck",
+    "translation": "приклеивать, застревать, держаться"
+  },
+  {
+    "word": "hang",
+    "verb_2": "hung / hanged",
+    "verb_3": "hung / hanged",
+    "translation": "вешать, висеть; казнить (hanged)"
+  },
+  {
+    "word": "shake",
+    "verb_2": "shook",
+    "verb_3": "shaken",
+    "translation": "трясти, дрожать, пожимать (руку)"
+  },
+  {
+    "word": "ride",
+    "verb_2": "rode",
+    "verb_3": "ridden",
+    "translation": "ехать верхом, кататься, ехать"
+  },
+  {
+    "word": "sing",
+    "verb_2": "sang",
+    "verb_3": "sung",
+    "translation": "петь, воспевать"
+  },
+  {
+    "word": "swim",
+    "verb_2": "swam",
+    "verb_3": "swum",
+    "translation": "плавать, плыть"
+  },
+  {
+    "word": "fly",
+    "verb_2": "flew",
+    "verb_3": "flown",
+    "translation": "летать, лететь, управлять самолётом"
+  },
+  {
+    "word": "sleep",
+    "verb_2": "slept",
+    "verb_3": "slept",
+    "translation": "спать, ночевать"
+  },
+  {
+    "word": "wake",
+    "verb_2": "woke",
+    "verb_3": "woken",
+    "translation": "просыпаться, будить"
+  },
+  {
+    "word": "eat",
+    "verb_2": "ate",
+    "verb_3": "eaten",
+    "translation": "есть, съедать, питаться"
+  },
+  {
+    "word": "drink",
+    "verb_2": "drank",
+    "verb_3": "drunk",
+    "translation": "пить, выпивать, напиваться"
+  },
+  {
+    "word": "steal",
+    "verb_2": "stole",
+    "verb_3": "stolen",
+    "translation": "красть, воровать, незаметно уносить"
+  },
+  {
+    "word": "bite",
+    "verb_2": "bit",
+    "verb_3": "bitten",
+    "translation": "кусать, укусить, жалить"
+  },
+  {
+    "word": "blow",
+    "verb_2": "blew",
+    "verb_3": "blown",
+    "translation": "дуть, взрывать, выдыхать"
+  },
+  {
+    "word": "burn",
+    "verb_2": "burned / burnt",
+    "verb_3": "burned / burnt",
+    "translation": "гореть, сжигать, обжигаться"
+  },
+  {
+    "word": "dream",
+    "verb_2": "dreamed / dreamt",
+    "verb_3": "dreamed / dreamt",
+    "translation": "мечтать, видеть сон, сниться"
+  },
+  {
+    "word": "feed",
+    "verb_2": "fed",
+    "verb_3": "fed",
+    "translation": "кормить, питать, подавать"
+  },
+  {
+    "word": "forgive",
+    "verb_2": "forgave",
+    "verb_3": "forgiven",
+    "translation": "прощать, простить"
+  },
+  {
+    "word": "freeze",
+    "verb_2": "froze",
+    "verb_3": "frozen",
+    "translation": "замерзать, замораживать, застывать"
+  },
+  {
+    "word": "arise",
+    "verb_2": "arose",
+    "verb_3": "arisen",
+    "translation": "возникать, появляться, происходить"
+  },
+  {
+    "word": "awake",
+    "verb_2": "awoke",
+    "verb_3": "awoken",
+    "translation": "просыпаться, будить, осознавать"
+  },
+  {
+    "word": "bend",
+    "verb_2": "bent",
+    "verb_3": "bent",
+    "translation": "гнуть, сгибать, наклоняться"
+  },
+  {
+    "word": "bet",
+    "verb_2": "bet",
+    "verb_3": "bet",
+    "translation": "держать пари, ставить, быть уверенным"
+  },
+  {
+    "word": "bind",
+    "verb_2": "bound",
+    "verb_3": "bound",
+    "translation": "связывать, переплетать, обязывать"
+  },
+  {
+    "word": "bleed",
+    "verb_2": "bled",
+    "verb_3": "bled",
+    "translation": "кровоточить, истекать кровью"
+  },
+  {
+    "word": "breed",
+    "verb_2": "bred",
+    "verb_3": "bred",
+    "translation": "разводить, выращивать, порождать"
+  },
+  {
+    "word": "broadcast",
+    "verb_2": "broadcast",
+    "verb_3": "broadcast",
+    "translation": "транслировать, вещать, распространять"
+  },
+  {
+    "word": "burst",
+    "verb_2": "burst",
+    "verb_3": "burst",
+    "translation": "лопаться, взрываться, разражаться"
+  },
+  {
+    "word": "cast",
+    "verb_2": "cast",
+    "verb_3": "cast",
+    "translation": "бросать, отливать, распределять роли"
+  },
+  {
+    "word": "cling",
+    "verb_2": "clung",
+    "verb_3": "clung",
+    "translation": "цепляться, держаться, льнуть"
+  },
+  {
+    "word": "creep",
+    "verb_2": "crept",
+    "verb_3": "crept",
+    "translation": "ползти, красться, подкрадываться"
+  },
+  {
+    "word": "dig",
+    "verb_2": "dug",
+    "verb_3": "dug",
+    "translation": "копать, рыть, раскапывать"
+  },
+  {
+    "word": "flee",
+    "verb_2": "fled",
+    "verb_3": "fled",
+    "translation": "бежать, спасаться бегством, убегать"
+  },
+  {
+    "word": "fling",
+    "verb_2": "flung",
+    "verb_3": "flung",
+    "translation": "швырять, бросать, кидаться"
+  },
+  {
+    "word": "forbid",
+    "verb_2": "forbade",
+    "verb_3": "forbidden",
+    "translation": "запрещать, не разрешать"
+  },
+  {
+    "word": "forecast",
+    "verb_2": "forecast",
+    "verb_3": "forecast",
+    "translation": "прогнозировать, предсказывать"
+  },
+  {
+    "word": "foresee",
+    "verb_2": "foresaw",
+    "verb_3": "foreseen",
+    "translation": "предвидеть, предугадывать"
+  },
+  {
+    "word": "grind",
+    "verb_2": "ground",
+    "verb_3": "ground",
+    "translation": "молоть, перемалывать, точить"
+  },
+  {
+    "word": "kneel",
+    "verb_2": "knelt / kneeled",
+    "verb_3": "knelt / kneeled",
+    "translation": "становиться на колени, преклонять колени"
+  },
+  {
+    "word": "knit",
+    "verb_2": "knitted / knit",
+    "verb_3": "knitted / knit",
+    "translation": "вязать, связывать, хмурить (брови)"
+  },
+  {
+    "word": "mislead",
+    "verb_2": "misled",
+    "verb_3": "misled",
+    "translation": "вводить в заблуждение, обманывать"
+  },
+  {
+    "word": "mistake",
+    "verb_2": "mistook",
+    "verb_3": "mistaken",
+    "translation": "ошибаться, принимать за другого"
+  },
+  {
+    "word": "overcome",
+    "verb_2": "overcame",
+    "verb_3": "overcome",
+    "translation": "преодолевать, побеждать, справляться"
+  },
+  {
+    "word": "overtake",
+    "verb_2": "overtook",
+    "verb_3": "overtaken",
+    "translation": "обгонять, настигать, охватывать"
+  },
+  {
+    "word": "quit",
+    "verb_2": "quit",
+    "verb_3": "quit",
+    "translation": "бросать, увольняться, прекращать"
+  },
+  {
+    "word": "rid",
+    "verb_2": "rid",
+    "verb_3": "rid",
+    "translation": "избавлять, освобождать"
+  },
+  {
+    "word": "sew",
+    "verb_2": "sewed",
+    "verb_3": "sewn / sewed",
+    "translation": "шить, сшивать, пришивать"
+  },
+  {
+    "word": "shed",
+    "verb_2": "shed",
+    "verb_3": "shed",
+    "translation": "проливать (слёзы), сбрасывать, терять"
+  },
+  {
+    "word": "shine",
+    "verb_2": "shone / shined",
+    "verb_3": "shone / shined",
+    "translation": "светить, сиять; начищать (shined)"
+  },
+  {
+    "word": "shoot",
+    "verb_2": "shot",
+    "verb_3": "shot",
+    "translation": "стрелять, снимать (фильм), бросать"
+  },
+  {
+    "word": "shrink",
+    "verb_2": "shrank",
+    "verb_3": "shrunk",
+    "translation": "сжиматься, сокращаться, уменьшать"
+  },
+  {
+    "word": "sink",
+    "verb_2": "sank",
+    "verb_3": "sunk",
+    "translation": "тонуть, опускаться, погружаться"
+  },
+  {
+    "word": "slide",
+    "verb_2": "slid",
+    "verb_3": "slid",
+    "translation": "скользить, съезжать, скользнуть"
+  },
+  {
+    "word": "sling",
+    "verb_2": "slung",
+    "verb_3": "slung",
+    "translation": "швырять, вешать на ремень, подвешивать"
+  },
+  {
+    "word": "slit",
+    "verb_2": "slit",
+    "verb_3": "slit",
+    "translation": "разрезать, прорезать, щель"
+  },
+  {
+    "word": "smell",
+    "verb_2": "smelled / smelt",
+    "verb_3": "smelled / smelt",
+    "translation": "пахнуть, чувствовать запах, нюхать"
+  },
+  {
+    "word": "sow",
+    "verb_2": "sowed",
+    "verb_3": "sown / sowed",
+    "translation": "сеять, засевать, распространять"
+  },
+  {
+    "word": "speed",
+    "verb_2": "sped / speeded",
+    "verb_3": "sped / speeded",
+    "translation": "мчаться, ускорять, превышать скорость"
+  },
+  {
+    "word": "spell",
+    "verb_2": "spelled / spelt",
+    "verb_3": "spelled / spelt",
+    "translation": "произносить по буквам, означать, заклинание"
+  },
+  {
+    "word": "spill",
+    "verb_2": "spilled / spilt",
+    "verb_3": "spilled / spilt",
+    "translation": "проливать, разливать, рассыпать"
+  },
+  {
+    "word": "spin",
+    "verb_2": "spun",
+    "verb_3": "spun",
+    "translation": "крутить, прясть, вращаться"
+  },
+  {
+    "word": "spit",
+    "verb_2": "spat / spit",
+    "verb_3": "spat / spit",
+    "translation": "плевать, плеваться, шипеть"
+  },
+  {
+    "word": "split",
+    "verb_2": "split",
+    "verb_3": "split",
+    "translation": "раскалывать, разделять, разрывать"
+  },
+  {
+    "word": "spoil",
+    "verb_2": "spoiled / spoilt",
+    "verb_3": "spoiled / spoilt",
+    "translation": "портить, баловать, портиться"
+  },
+  {
+    "word": "spring",
+    "verb_2": "sprang",
+    "verb_3": "sprung",
+    "translation": "прыгать, вскакивать, происходить"
+  },
+  {
+    "word": "sting",
+    "verb_2": "stung",
+    "verb_3": "stung",
+    "translation": "жалить, жечь, уязвлять"
+  },
+  {
+    "word": "stink",
+    "verb_2": "stank",
+    "verb_3": "stunk",
+    "translation": "вонять, смердеть, быть отвратительным"
+  },
+  {
+    "word": "stride",
+    "verb_2": "strode",
+    "verb_3": "stridden",
+    "translation": "шагать, идти большими шагами"
+  },
+  {
+    "word": "strive",
+    "verb_2": "strove",
+    "verb_3": "striven",
+    "translation": "стремиться, стараться, бороться"
+  },
+  {
+    "word": "swear",
+    "verb_2": "swore",
+    "verb_3": "sworn",
+    "translation": "клясться, ругаться, присягать"
+  },
+  {
+    "word": "sweep",
+    "verb_2": "swept",
+    "verb_3": "swept",
+    "translation": "мести, подметать, охватывать"
+  },
+  {
+    "word": "swell",
+    "verb_2": "swelled",
+    "verb_3": "swollen / swelled",
+    "translation": "опухать, набухать, увеличиваться"
+  },
+  {
+    "word": "swing",
+    "verb_2": "swung",
+    "verb_3": "swung",
+    "translation": "качать, размахивать, качаться"
+  },
+  {
+    "word": "tear",
+    "verb_2": "tore",
+    "verb_3": "torn",
+    "translation": "рвать, разрывать, слёзы (сущ.)"
+  },
+  {
+    "word": "tread",
+    "verb_2": "trod",
+    "verb_3": "trodden",
+    "translation": "ступать, наступать, топтать"
+  },
+  {
+    "word": "weep",
+    "verb_2": "wept",
+    "verb_3": "wept",
+    "translation": "плакать, рыдать, оплакивать"
+  },
+  {
+    "word": "wind",
+    "verb_2": "wound",
+    "verb_3": "wound",
+    "translation": "наматывать, виться, заводить (часы)"
+  },
+  {
+    "word": "withdraw",
+    "verb_2": "withdrew",
+    "verb_3": "withdrawn",
+    "translation": "отзывать, снимать, отступать"
+  },
+  {
+    "word": "wring",
+    "verb_2": "wrung",
+    "verb_3": "wrung",
+    "translation": "выжимать, скручивать, сжимать (руки)"
+  },
+  {
+    "word": "undergo",
+    "verb_2": "underwent",
+    "verb_3": "undergone",
+    "translation": "проходить через, подвергаться, испытывать"
+  },
+  {
+    "word": "undertake",
+    "verb_2": "undertook",
+    "verb_3": "undertaken",
+    "translation": "предпринимать, брать на себя, гарантировать"
+  },
+  {
+    "word": "uphold",
+    "verb_2": "upheld",
+    "verb_3": "upheld",
+    "translation": "поддерживать, соблюдать, защищать"
+  },
+  {
+    "word": "upset",
+    "verb_2": "upset",
+    "verb_3": "upset",
+    "translation": "расстраивать, опрокидывать, нарушать"
+  },
+  {
+    "word": "cost",
+    "verb_2": "cost",
+    "verb_3": "cost",
+    "translation": "стоить, обходиться, стоить (о цене)"
+  },
+  {
+    "word": "prove",
+    "verb_2": "proved",
+    "verb_3": "proved / proven",
+    "translation": "доказывать, подтверждать, оказываться"
+  },
+  {
+    "word": "dwell",
+    "verb_2": "dwelt / dwelled",
+    "verb_3": "dwelt / dwelled",
+    "translation": "жить, обитать, задерживаться (на чём-то)"
+  },
+  {
+    "word": "overhear",
+    "verb_2": "overheard",
+    "verb_3": "overheard",
+    "translation": "случайно услышать, подслушать"
+  },
+  {
+    "word": "oversleep",
+    "verb_2": "overslept",
+    "verb_3": "overslept",
+    "translation": "проспать, заспаться"
+  },
+  {
+    "word": "overthrow",
+    "verb_2": "overthrew",
+    "verb_3": "overthrown",
+    "translation": "свергать, ниспровергать, опрокидывать"
+  },
+  {
+    "word": "overdo",
+    "verb_2": "overdid",
+    "verb_3": "overdone",
+    "translation": "переусердствовать, перебарщивать, пережаривать"
+  },
+  {
+    "word": "overwrite",
+    "verb_2": "overwrote",
+    "verb_3": "overwritten",
+    "translation": "перезаписывать, затирать"
+  },
+  {
+    "word": "misunderstand",
+    "verb_2": "misunderstood",
+    "verb_3": "misunderstood",
+    "translation": "неправильно понимать, превратно истолковывать"
+  },
+  {
+    "word": "retell",
+    "verb_2": "retold",
+    "verb_3": "retold",
+    "translation": "пересказывать, рассказывать заново"
+  },
+  {
+    "word": "reread",
+    "verb_2": "reread",
+    "verb_3": "reread",
+    "translation": "перечитывать, читать заново"
+  },
+  {
+    "word": "recast",
+    "verb_2": "recast",
+    "verb_3": "recast",
+    "translation": "переделывать, перераспределять роли, пересоздавать"
+  },
+  {
+    "word": "typeset",
+    "verb_2": "typeset",
+    "verb_3": "typeset",
+    "translation": "набирать текст, верстать"
+  },
+  {
+    "word": "undercut",
+    "verb_2": "undercut",
+    "verb_3": "undercut",
+    "translation": "подрезать, снижать цену, подрывать"
+  },
+  {
+    "word": "browbeat",
+    "verb_2": "browbeat",
+    "verb_3": "browbeaten",
+    "translation": "запугивать, подавлять, брать на испуг"
+  },
+  {
+    "word": "befall",
+    "verb_2": "befell",
+    "verb_3": "befallen",
+    "translation": "случаться, происходить, постигать"
+  },
+  {
+    "word": "foretell",
+    "verb_2": "foretold",
+    "verb_3": "foretold",
+    "translation": "предсказывать, предвещать"
+  },
+  {
+    "word": "misspell",
+    "verb_2": "misspelled / misspelt",
+    "verb_3": "misspelled / misspelt",
+    "translation": "делать орфографическую ошибку, писать с ошибкой"
+  },
+  {
+    "word": "beset",
+    "verb_2": "beset",
+    "verb_3": "beset",
+    "translation": "осаждать, окружать, преследовать"
+  },
+  {
+    "word": "beget",
+    "verb_2": "begot",
+    "verb_3": "begotten",
+    "translation": "порождать, производить, вызывать"
+  },
+  {
+    "word": "gainsay",
+    "verb_2": "gainsaid",
+    "verb_3": "gainsaid",
+    "translation": "отрицать, противоречить, оспаривать"
+  },
+  {
+    "word": "backbite",
+    "verb_2": "backbit",
+    "verb_3": "backbitten",
+    "translation": "злословить, клеветать за спиной"
+  },
+  {
+    "word": "forsake",
+    "verb_2": "forsook",
+    "verb_3": "forsaken",
+    "translation": "покидать, оставлять, отказываться"
+  },
+  {
+    "word": "forswear",
+    "verb_2": "forswore",
+    "verb_3": "forsworn",
+    "translation": "отрекаться, клятвенно отказываться"
+  },
+  {
+    "word": "outbid",
+    "verb_2": "outbid",
+    "verb_3": "outbid",
+    "translation": "перебивать ставку, предлагать больше"
+  },
+  {
+    "word": "outshine",
+    "verb_2": "outshone",
+    "verb_3": "outshone",
+    "translation": "затмевать, превосходить, сиять ярче"
+  },
+  {
+    "word": "overpay",
+    "verb_2": "overpaid",
+    "verb_3": "overpaid",
+    "translation": "переплачивать, платить слишком много"
+  },
+  {
+    "word": "override",
+    "verb_2": "overrode",
+    "verb_3": "overridden",
+    "translation": "отменять, переопределять, попирать"
+  },
+  {
+    "word": "oversee",
+    "verb_2": "oversaw",
+    "verb_3": "overseen",
+    "translation": "наблюдать, контролировать, надзирать"
+  },
+  {
+    "word": "overspend",
+    "verb_2": "overspent",
+    "verb_3": "overspent",
+    "translation": "перерасходовать, тратить слишком много"
+  },
+  {
+    "word": "betake",
+    "verb_2": "betook",
+    "verb_3": "betaken",
+    "translation": "отправляться, прибегать (к чему-либо)"
+  },
+  {
+    "word": "plead",
+    "verb_2": "pleaded / pled",
+    "verb_3": "pleaded / pled",
+    "translation": "умолять, просить, утверждать (в суде)"
+  },
+  {
+    "word": "abide",
+    "verb_2": "abode / abided",
+    "verb_3": "abode / abided",
+    "translation": "соблюдать, придерживаться, терпеть"
+  },
+  {
+    "word": "alight",
+    "verb_2": "alit / alighted",
+    "verb_3": "alit / alighted",
+    "translation": "выходить (из транспорта), приземляться, загораться"
+  },
+  {
+    "word": "behold",
+    "verb_2": "beheld",
+    "verb_3": "beheld",
+    "translation": "видеть, созерцать, наблюдать"
+  },
+  {
+    "word": "beseech",
+    "verb_2": "besought / beseeched",
+    "verb_3": "besought / beseeched",
+    "translation": "умолять, упрашивать"
+  },
+  {
+    "word": "bid",
+    "verb_2": "bid / bade",
+    "verb_3": "bid / bidden",
+    "translation": "предлагать цену; велеть, приветствовать (bade)"
+  },
+  {
+    "word": "chide",
+    "verb_2": "chided / chid",
+    "verb_3": "chided / chidden",
+    "translation": "бранить, ругать, упрекать"
+  },
+  {
+    "word": "cleave",
+    "verb_2": "cleft / cleaved / clove",
+    "verb_3": "cleft / cleaved / cloven",
+    "translation": "раскалывать, рассекать; прилипать (cleaved)"
+  },
+  {
+    "word": "clothe",
+    "verb_2": "clothed / clad",
+    "verb_3": "clothed / clad",
+    "translation": "одевать, одеваться, снабжать одеждой"
+  },
+  {
+    "word": "dive",
+    "verb_2": "dived / dove",
+    "verb_3": "dived",
+    "translation": "нырять, погружаться, бросаться"
+  },
+  {
+    "word": "fit",
+    "verb_2": "fit / fitted",
+    "verb_3": "fit / fitted",
+    "translation": "подходить, соответствовать, устанавливать"
+  },
+  {
+    "word": "gild",
+    "verb_2": "gilded / gilt",
+    "verb_3": "gilded / gilt",
+    "translation": "золотить, покрывать позолотой"
+  },
+  {
+    "word": "gird",
+    "verb_2": "girded / girt",
+    "verb_3": "girded / girt",
+    "translation": "опоясывать, окружать, готовиться"
+  },
+  {
+    "word": "heave",
+    "verb_2": "heaved / hove",
+    "verb_3": "heaved / hove",
+    "translation": "поднимать, вздымать, бросать"
+  },
+  {
+    "word": "hew",
+    "verb_2": "hewed",
+    "verb_3": "hewn / hewed",
+    "translation": "рубить, вырубать, обтёсывать"
+  },
+  {
+    "word": "inlay",
+    "verb_2": "inlaid",
+    "verb_3": "inlaid",
+    "translation": "инкрустировать, вставлять, выкладывать"
+  },
+  {
+    "word": "input",
+    "verb_2": "input / inputted",
+    "verb_3": "input / inputted",
+    "translation": "вводить (данные), вкладывать"
+  },
+  {
+    "word": "interweave",
+    "verb_2": "interwove",
+    "verb_3": "interwoven",
+    "translation": "переплетать, сплетать, вплетать"
+  },
+  {
+    "word": "lade",
+    "verb_2": "laded",
+    "verb_3": "laden / laded",
+    "translation": "грузить, нагружать, черпать"
+  },
+  {
+    "word": "lean",
+    "verb_2": "leaned / leant",
+    "verb_3": "leaned / leant",
+    "translation": "наклоняться, прислоняться, опираться"
+  },
+  {
+    "word": "leap",
+    "verb_2": "leaped / leapt",
+    "verb_3": "leaped / leapt",
+    "translation": "прыгать, вскакивать, перепрыгивать"
+  },
+  {
+    "word": "light",
+    "verb_2": "lit / lighted",
+    "verb_3": "lit / lighted",
+    "translation": "зажигать, освещать, прикуривать"
+  },
+  {
+    "word": "melt",
+    "verb_2": "melted",
+    "verb_3": "molten / melted",
+    "translation": "таять, плавить, смягчаться"
+  },
+  {
+    "word": "mow",
+    "verb_2": "mowed",
+    "verb_3": "mown / mowed",
+    "translation": "косить, скашивать, подстригать"
+  },
+  {
+    "word": "offset",
+    "verb_2": "offset",
+    "verb_3": "offset",
+    "translation": "компенсировать, возмещать, уравновешивать"
+  },
+  {
+    "word": "outdo",
+    "verb_2": "outdid",
+    "verb_3": "outdone",
+    "translation": "превосходить, переплюнуть, делать лучше"
+  },
+  {
+    "word": "outgrow",
+    "verb_2": "outgrew",
+    "verb_3": "outgrown",
+    "translation": "перерастать, вырастать из"
+  },
+  {
+    "word": "outrun",
+    "verb_2": "outran",
+    "verb_3": "outrun",
+    "translation": "обгонять, убегать от, перегонять"
+  },
+  {
+    "word": "outsell",
+    "verb_2": "outsold",
+    "verb_3": "outsold",
+    "translation": "продаваться лучше, превосходить в продажах"
+  },
+  {
+    "word": "partake",
+    "verb_2": "partook",
+    "verb_3": "partaken",
+    "translation": "участвовать, принимать участие, есть или пить"
+  },
+  {
+    "word": "preset",
+    "verb_2": "preset",
+    "verb_3": "preset",
+    "translation": "предустанавливать, заранее задавать"
+  },
+  {
+    "word": "proofread",
+    "verb_2": "proofread",
+    "verb_3": "proofread",
+    "translation": "вычитывать, проверять текст, корректировать"
+  },
+  {
+    "word": "rebuild",
+    "verb_2": "rebuilt",
+    "verb_3": "rebuilt",
+    "translation": "перестраивать, восстанавливать, отстраивать"
+  },
+  {
+    "word": "redo",
+    "verb_2": "redid",
+    "verb_3": "redone",
+    "translation": "переделывать, делать заново"
+  },
+  {
+    "word": "remake",
+    "verb_2": "remade",
+    "verb_3": "remade",
+    "translation": "переделывать, переснимать, переизготавливать"
+  },
+  {
+    "word": "rend",
+    "verb_2": "rent",
+    "verb_3": "rent",
+    "translation": "разрывать, раздирать, раскалывать"
+  },
+  {
+    "word": "repay",
+    "verb_2": "repaid",
+    "verb_3": "repaid",
+    "translation": "возвращать (долг), отплачивать, вознаграждать"
+  },
+  {
+    "word": "rerun",
+    "verb_2": "reran",
+    "verb_3": "rerun",
+    "translation": "перезапускать, повторять, показывать повторно"
+  },
+  {
+    "word": "resell",
+    "verb_2": "resold",
+    "verb_3": "resold",
+    "translation": "перепродавать"
+  },
+  {
+    "word": "reset",
+    "verb_2": "reset",
+    "verb_3": "reset",
+    "translation": "сбрасывать, перезагружать, устанавливать заново"
+  },
+  {
+    "word": "rethink",
+    "verb_2": "rethought",
+    "verb_3": "rethought",
+    "translation": "переосмысливать, обдумывать заново"
+  },
+  {
+    "word": "rewrite",
+    "verb_2": "rewrote",
+    "verb_3": "rewritten",
+    "translation": "переписывать, переделывать текст"
+  },
+  {
+    "word": "shear",
+    "verb_2": "sheared",
+    "verb_3": "shorn / sheared",
+    "translation": "стричь, срезать, лишать"
+  },
+  {
+    "word": "shoe",
+    "verb_2": "shoed / shod",
+    "verb_3": "shoed / shod",
+    "translation": "обувать, подковывать"
+  },
+  {
+    "word": "slay",
+    "verb_2": "slew",
+    "verb_3": "slain",
+    "translation": "убивать, сражать, уничтожать"
+  },
+  {
+    "word": "smite",
+    "verb_2": "smote",
+    "verb_3": "smitten",
+    "translation": "поражать, сражать, карать"
+  },
+  {
+    "word": "stave",
+    "verb_2": "staved / stove",
+    "verb_3": "staved / stove",
+    "translation": "пробивать, отгонять, предотвращать"
+  },
+  {
+    "word": "strew",
+    "verb_2": "strewed",
+    "verb_3": "strewn / strewed",
+    "translation": "разбрасывать, усыпать, расстилать"
+  },
+  {
+    "word": "sublet",
+    "verb_2": "sublet",
+    "verb_3": "sublet",
+    "translation": "сдавать в субаренду"
+  },
+  {
+    "word": "sweat",
+    "verb_2": "sweated / sweat",
+    "verb_3": "sweated / sweat",
+    "translation": "потеть, выделять влагу, тяжело работать"
+  },
+  {
+    "word": "thrive",
+    "verb_2": "thrived / throve",
+    "verb_3": "thrived / thriven",
+    "translation": "процветать, преуспевать, расти"
+  },
+  {
+    "word": "thrust",
+    "verb_2": "thrust",
+    "verb_3": "thrust",
+    "translation": "толкать, вонзать, навязывать"
+  },
+  {
+    "word": "unbend",
+    "verb_2": "unbent",
+    "verb_3": "unbent",
+    "translation": "разгибать, расслабляться, смягчаться"
+  },
+  {
+    "word": "underdo",
+    "verb_2": "underdid",
+    "verb_3": "underdone",
+    "translation": "недоделывать, недожаривать"
+  },
+  {
+    "word": "underlie",
+    "verb_2": "underlay",
+    "verb_3": "underlain",
+    "translation": "лежать в основе, быть причиной"
+  },
+  {
+    "word": "underpay",
+    "verb_2": "underpaid",
+    "verb_3": "underpaid",
+    "translation": "недоплачивать, платить меньше"
+  },
+  {
+    "word": "undersell",
+    "verb_2": "undersold",
+    "verb_3": "undersold",
+    "translation": "продавать дешевле, недооценивать"
+  },
+  {
+    "word": "underwrite",
+    "verb_2": "underwrote",
+    "verb_3": "underwritten",
+    "translation": "страховать, гарантировать, подписывать"
+  },
+  {
+    "word": "undo",
+    "verb_2": "undid",
+    "verb_3": "undone",
+    "translation": "отменять, расстёгивать, разрушать"
+  },
+  {
+    "word": "unfreeze",
+    "verb_2": "unfroze",
+    "verb_3": "unfrozen",
+    "translation": "размораживать, разблокировать"
+  },
+  {
+    "word": "unwind",
+    "verb_2": "unwound",
+    "verb_3": "unwound",
+    "translation": "разматывать, расслабляться"
+  },
+  {
+    "word": "waylay",
+    "verb_2": "waylaid",
+    "verb_3": "waylaid",
+    "translation": "подстерегать, устраивать засаду"
+  },
+  {
+    "word": "weave",
+    "verb_2": "wove / weaved",
+    "verb_3": "woven / weaved",
+    "translation": "ткать, плести, вплетать"
+  },
+  {
+    "word": "wed",
+    "verb_2": "wedded / wed",
+    "verb_3": "wedded / wed",
+    "translation": "жениться, выходить замуж, сочетать браком"
+  },
+  {
+    "word": "wet",
+    "verb_2": "wetted / wet",
+    "verb_3": "wetted / wet",
+    "translation": "мочить, смачивать, увлажнять"
+  },
+  {
+    "word": "withhold",
+    "verb_2": "withheld",
+    "verb_3": "withheld",
+    "translation": "удерживать, не выдавать, скрывать"
+  },
+  {
+    "word": "withstand",
+    "verb_2": "withstood",
+    "verb_3": "withstood",
+    "translation": "выдерживать, противостоять, сопротивляться"
+  }
+]
