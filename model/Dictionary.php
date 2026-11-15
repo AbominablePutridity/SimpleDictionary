@@ -122,7 +122,7 @@ class Dictionary implements ModelInterface
     public function insert(): void
     {
         if (!empty($this->findOne(['eng_word' => $this->getEngWord()]))) {
-            throw new \InvalidArgumentException('this word already exists!');
+            throw new \InvalidArgumentException('this word already exists! -> ' . $this->getEngWord());
         }
 
         // Insert a record
